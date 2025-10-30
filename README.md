@@ -1,3 +1,4 @@
+<img width="2255" height="2255" alt="qr-code (14)" src="https://github.com/user-attachments/assets/9d51cea3-9d7d-4fe6-b2b9-74a77c46fbd2" />
 # Brain Exploder 🚀
 
 <div align="center">
