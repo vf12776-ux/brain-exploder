@@ -1,0 +1,13 @@
+name: ml_engine
+description: Machine learning for productivity analysis
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  vector_math: ^2.1.4
+  equatable: ^2.0.5
+
+dev_dependencies:
+  build_runner: ^2.4.0

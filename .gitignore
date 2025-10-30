@@ -1,0 +1,49 @@
+# Flutter
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+flutter_*.png
+*.o
+*.so
+*.dylib
+*.a
+
+# Android
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+
+# iOS
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/App.framework
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# MacOS
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# Melos
+.melos/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

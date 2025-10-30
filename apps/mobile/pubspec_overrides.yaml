@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: analytics_core,ui_kit
+dependency_overrides:
+  analytics_core:
+    path: ../../packages/analytics_core
+  ui_kit:
+    path: ../../packages/ui_kit

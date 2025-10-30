@@ -1,0 +1,26 @@
+name: brain_exploder
+packages:
+  - "apps/**"
+  - "packages/**"
+  - "tools/**"
+
+scripts:
+  bootstrap:
+    description: "Bootstrap all packages"
+    run: |
+      melos exec "dart pub get"
+  
+  build:
+    description: "Build all packages"
+    run: |
+      melos exec "dart run build_runner build --delete-conflicting-outputs"
+  
+  analyze:
+    description: "Analyze all code"
+    run: |
+      melos exec "dart analyze"
+  
+  test:
+    description: "Test all packages"
+    run: |
+      melos exec "dart test"

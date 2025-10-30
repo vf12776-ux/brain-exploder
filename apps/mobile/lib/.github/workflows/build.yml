@@ -1,0 +1,29 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Dart
+      uses: dart-lang/setup-dart@v1
+      
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      
+    - name: Install Melos
+      run: dart pub global activate melos
+      
+    - name: Bootstrap packages
+      run: melos bootstrap
+      
+    - name: Analyze code
+      run: melos run analyze

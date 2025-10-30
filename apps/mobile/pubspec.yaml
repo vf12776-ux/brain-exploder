@@ -1,0 +1,33 @@
+name: brain_exploder_mobile
+description: "Personal Analytics Dashboard - Mobile"
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Наши локальные пакеты
+  analytics_core:
+    path: ../../packages/analytics_core
+  ui_kit:
+    path: ../../packages/ui_kit
+  
+  # Дополнительные зависимости
+  flutter_bloc: ^8.1.3
+  equatable: ^2.0.5
+  http: ^0.13.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
