@@ -83,5 +83,47 @@
       }
     }, 5000);
   </script>
+  <script>
+// Простой патч для GitHub API
+window.addEventListener('load', function() {
+  console.log('Applying GitHub API patch...');
+  
+  // Перехватываем запросы к GitHub API
+  const originalFetch = window.fetch;
+  window.fetch = function(...args) {
+    const url = args[0];
+    
+    // Если это запрос к событиям GitHub
+    if (url && url.includes('api.github.com/users/') && url.includes('/events')) {
+      return originalFetch.apply(this, args).then(response => {
+        return response.json().then(events => {
+          console.log('Patching', events.length, 'GitHub events');
+          
+          // Исправляем каждое событие PushEvent
+          const patchedEvents = events.map(event => {
+            if (event.type === 'PushEvent') {
+              // Добавляем поле commits если его нет
+              if (!event.payload.commits) {
+                event.payload.commits = [{}]; // Простой коммит
+              }
+            }
+            return event;
+          });
+          
+          // Возвращаем исправленные данные
+          return new Response(JSON.stringify(patchedEvents), {
+            status: response.status,
+            statusText: response.statusText,
+            headers: response.headers
+          });
+        });
+      });
+    }
+    
+    // Для других запросов ничего не меняем
+    return originalFetch.apply(this, args);
+  };
+});
+</script>
 </body>
 </html>
