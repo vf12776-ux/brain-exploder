@@ -10,15 +10,15 @@
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
-        {
-            "src": "/brain-exploder/assets/icons/icon77.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/brain-exploder/assets/icons/icon77.png",
-            "sizes": "512x512", 
-            "type": "image/png"
-        }
-    ]
+    {
+        "src": "icons/icon77.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+        "src": "icons/icon77.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+]
 }
