@@ -28,8 +28,8 @@ class GitHubApiClient {
   }
 
   GithubActivity _eventToActivity(Map<String, dynamic> event) {
-    final commits = event['payload']?['commits']?.length ?? 0;
-    
+    final commits = (event['type'] == 'PushEvent') ? 1 : 0;    
+   
     return GithubActivity(
       timestamp: DateTime.parse(event['created_at']),
       eventType: event['type'],
