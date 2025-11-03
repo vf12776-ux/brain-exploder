@@ -1,7 +1,8 @@
+
 {
     "name": "Brain Exploder",
-    "short_name": "BrainExploder",
-    "start_url": ".",
+    "short_name": "BrainExploder", 
+    "start_url": "/brain-exploder/",
     "display": "standalone",
     "background_color": "#0D47A1",
     "theme_color": "#0D47A1",
@@ -10,16 +11,14 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "assets/icons/icon77.png",
+            "src": "/brain-exploder/assets/icons/icon77.png",
             "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "type": "image/png"
         },
         {
-            "src": "assets/icons/icon77.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "src": "/brain-exploder/assets/icons/icon77.png",
+            "sizes": "512x512", 
+            "type": "image/png"
         }
     ]
 }
